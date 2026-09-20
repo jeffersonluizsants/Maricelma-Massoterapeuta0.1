@@ -2,6 +2,7 @@ package com.maricelma.massoterapia.Modelos;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -37,9 +38,64 @@ public class Usuario implements UserDetails {
     }
 
     @Override
-    public String getPassword() { return senha; }
+    public @Nullable String getPassword() {
+        return "";
+    }
+
     @Override
-    public String getUsername() { return email; }
+    public String getUsername() {
+        return "";
+    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
     @Override
     public boolean isAccountNonExpired() { return true; }
     @Override
