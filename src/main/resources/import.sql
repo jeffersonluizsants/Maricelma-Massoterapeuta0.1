@@ -1,0 +1,16 @@
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Massagem Relaxante', 'Reduzir cansaço, eliminar toxinas, melhorar circulação', 50, 90.00, true);
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Massagem Modeladora', 'Redução de medidas, rompimento de células de gordura, melhora da oxigenação', 60, 90.00, true);
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Drenagem Linfática Manual', 'Eliminação de líquidos e toxinas, tratamento de celulite e inchaço', 60, 90.00, false);
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Ventosa Terapia', 'Alívio de dores, melhora da circulação e recuperação muscular em membros inferiores', 40, 70.00, false);
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Massagem Terapêutica', 'Tratamento localizado, alívio de dores musculares e posturais', 40, 80.00, false);
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Quick Massagem', 'Massagem rápida em cadeira para empresas ou eventos', 30, 40.00, false);
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Plástica dos Pés', 'Esfoliação, hidratação e remoção de calosidade', 40, 50.00, false);
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Escalda-Pés', 'Imersão dos pés em água morna para relaxamento e alívio de dores', 30, 50.00, false);
+INSERT INTO servicos (nome, descricao, duracao_minutos, valor, possui_plano) VALUES ('Reflexologia Podal', 'Massagem em pés e pernas com estímulo de pontos reflexos', 40, 50.00, false);
+INSERT INTO horarios_funcionamento (dia_semana, hora_abertura, hora_fechamento, ativo) VALUES ('MONDAY', '08:00:00', '18:00:00', true);
+INSERT INTO horarios_funcionamento (dia_semana, hora_abertura, hora_fechamento, ativo) VALUES ('TUESDAY', '08:00:00', '18:00:00', true);
+INSERT INTO horarios_funcionamento (dia_semana, hora_abertura, hora_fechamento, ativo) VALUES ('WEDNESDAY', '08:00:00', '18:00:00', true);
+INSERT INTO horarios_funcionamento (dia_semana, hora_abertura, hora_fechamento, ativo) VALUES ('THURSDAY', '08:00:00', '18:00:00', true);
+INSERT INTO horarios_funcionamento (dia_semana, hora_abertura, hora_fechamento, ativo) VALUES ('FRIDAY', '08:00:00', '18:00:00', true);
+INSERT INTO horarios_funcionamento (dia_semana, hora_abertura, hora_fechamento, ativo) VALUES ('SATURDAY', '08:00:00', '12:00:00', true);
+INSERT INTO horarios_funcionamento (dia_semana, hora_abertura, hora_fechamento, ativo) VALUES ('SUNDAY', '08:00:00', '12:00:00', false);
