@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: maricelma_db
+    restart: always
+    environment:
+      POSTGRES_DB: maricelma_massoterapia_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    container_name: maricelma_api
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/maricelma_massoterapia_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin123
+      - API_SECURITY_TOKEN_SECRET=minha-chave-super-segura-123
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
